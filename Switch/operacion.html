@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Numero1=parseFloat(prompt("Ingrese un numero: "));
+        let Numero2=parseFloat(prompt("Ingrese otro numero: "));
+        let Operador=prompt("Ingrese un operador (+,-,*,/): ");
+
+        let resultado;
+
+        switch(Operador){
+            case "+":
+                resultado =  Numero1+Numero2;
+                break;
+            case "-":
+                resultado = Numero1-Numero2;
+                break;
+            case "*":
+                resultado = Numero1*Numero2;
+                break;
+            case "/":
+                if (Numero2 !=0 ){
+                    resultado = Numero1/Numero2;
+                }else{
+                    resultado = "Error: division por cero";
+                }
+                break;
+            default:
+                resultado ="Operador no valido";
+        }
+        console.log("El resultado es: "+ resultado);
+    </script>
+</body>
+</html>

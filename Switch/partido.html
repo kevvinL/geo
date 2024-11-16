@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let NomEquipo=prompt("Digite el nombre del equipo: ");
+        let Puntuacion=prompt("Ingresa el resultado del partido (Ganado,Perdido o empatado) ");
+
+        ganado=5;
+        empatado=3;
+        perdido=0;
+
+        switch(Puntuacion){
+            case "ganado":
+                console.log("Tus puntos son "+ganado);
+                break;
+            case "perdido":
+                console.log("Tus puntos son "+perdido);
+                break;
+            case "empatado":
+                console.log("Tus puntos son "+empatado);
+                break;
+            default:
+                console.log("Error");
+        }
+    </script>
+</body>
+</html>

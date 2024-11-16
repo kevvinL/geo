@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let saldo = 2000;
+
+        while (true) {
+        let monto = prompt("Ingrese el monto que desea retirar o escriba 'salir' para finalizar:");
+
+        if (monto.toLowerCase() === 'salir') {
+            alert("Gracias por utilizar el cajero automático.");
+            break;
+        }
+
+        monto = parseFloat(monto);
+
+        if (isNaN(monto) || monto <= 0) {
+            alert("Por favor, ingrese un monto válido.");
+            continue;
+        }
+
+        if (monto > saldo) {
+            alert("Error: El monto ingresado excede el saldo disponible.");
+        } else {
+            saldo -= monto;
+            alert(`Retiro exitoso. Su saldo restante es: $${saldo}`);
+        }
+
+        if (saldo === 0) {
+            alert("Su saldo es 0. No puede realizar más retiros.");
+            break;
+        }
+        }
+
+    </script>
+</body>
+</html>

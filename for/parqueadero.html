@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Vehículos en el Parqueadero</title>
+</head>
+<body>
+
+    <h1>Registro de Vehículos en el Parqueadero</h1>
+
+    <script>
+        let numVehiculos = parseInt(prompt("¿Cuántos vehículos ingresarán al parqueadero?"));
+        
+        if (isNaN(numVehiculos) || numVehiculos <= 0) {
+            alert("Por favor, ingrese un número válido de vehículos.");
+        } else {
+            let vehiculos = [];
+
+            for (let i = 0; i < numVehiculos; i++) {
+                let placa = prompt(`Ingrese la placa del vehículo ${i + 1}:`);
+                let horaIngreso = new Date().toLocaleTimeString();
+
+                vehiculos.push({
+                    placa: placa,
+                    horaIngreso: horaIngreso
+                });
+            }
+            let resumen = "Resumen de vehículos registrados:\n";
+            vehiculos.forEach((vehiculo, index) => {
+                resumen += `Vehículo ${index + 1}: Placa: ${vehiculo.placa}, Hora de Ingreso: ${vehiculo.horaIngreso}\n`;
+            });
+
+            alert(resumen);
+        }
+    </script>
+
+</body>
+</html>

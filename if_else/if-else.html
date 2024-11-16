@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var NomreCliente = "";
+        NomreCliente=prompt("Digite el nombre del cliente: ");
+        var EdadCliente=prompt("Digite la edad del cliente: ");
+
+        if (EdadCliente<18){
+            console.log("El cliente: " +NomreCliente + "es menor de edad. " );
+        }else{
+            console.log("el cliente: " + NomreCliente + "Es mayor de edad. " );
+        }
+
+        if (EdadCliente<=0){
+            console.log("la edad del cliente no existe. ");
+        }else if(EdadCliente>100){
+            console.log("la edad del cliente es superior de lo normal");
+        }else{
+            console.log("esta digitando una cadena de texto. ");
+        }
+    </script>
+</body>
+</html>

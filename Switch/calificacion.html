@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Edad=parseInt(prompt("Ingrese su edad: "));
+
+        switch (true){
+            case Edad>0 && Edad<12:
+                console.log("NIÑO");
+                break;
+            case Edad>11 && Edad<18:
+                console.log("ADOLESCENTE");
+                break;
+            case Edad>17 && Edad<40:
+                console.log("ADULTO");
+                break;
+            case Edad>39 && Edad<100:
+                console.log("ADULTO MAYOR");
+                break;
+            default:
+                console.log("Error de edad")
+            }
+    </script>
+</body>
+</html>
